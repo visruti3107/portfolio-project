@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+        .portfolio-content {
+            display: none;
+            margin-top: 50px;
+        }
+        header {
+            background: url('images/visruti.jpg') no-repeat center/cover;
+            padding: 50px 0;
+            color: white;
+        }
+        .profile-picture {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgb(147, 223, 8);
+            margin-top: 10px;
+            animation: rotateProfile 5s linear infinite;
+        }
+
+        @keyframes rotateProfile {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            color: #ff4500;
+        }
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(24, 1, 1, 0.1);
+            text-align: left;
+            color: black;
+            display: none; /* Initially hidden */
+        }
+        h2 {
+            color: #0073e6;
+        }
+        .download-button {
+            background: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .download-button:hover {
+            background: #ff4500;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <div class="container" id="landing-page">
+        <img src="photo 25.jpg" alt="Profile Picture" class="profile-picture">
+        <h1>Hi, I am <span class="highlight">VISRUTI A</span>.</h1>
+        <p>skilled in programming , design, art and craft</p>
+        <button class="btn" onclick="showPortfolio()">View My Portfolio</button>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/visruti31075?utm_source=qr&igsh=MWNnazVya2c4cm1qOA=="><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Portfolio Section -->
+    <div class="portfolio-content" id="portfolio">
+        <header>
+            <img src="visruti.jpg" alt="Profile Picture" class="profile-picture">
+            <h1>Visruti A</h1>
+            <p>BSc Computer Science | Enthusiastic Learner</p>
+        </header>
+
+        <nav>
+            <a href="#" onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('education')">Education</a>
+            <a href="#" onclick="showSection('skills')">Skills</a>
+            <a href="#" onclick="showSection('course')">Courses</a>
+            <a href="#" onclick="showSection('hobbies')">Hobbies</a>
+            <a href="#" onclick="showSection('certifications')">Certifications</a>
+            <a href="#" onclick="showSection('resume')">Resume</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </nav>
+
+        <main>
+            <section id="about">
+                <img src="about-us.jpg"alt=" about Section Image">
+                <h2>About Me</h2>
+                <p>A passionate Computer Science graduate, skilled in programming and design.I am a dedicated and passionate Computer Science graduate eager to apply my knowledge and skills in a professional setting. With a strong foundation in programming and problem-solving, I am also enthusiastic about graphic design, combining creativity with technology to develop visually appealing and functional solutions .I am seeking an entry-level position where I can leverage my technical and design skills, collaborate with teams, and contribute to meaningful projects. I thrive on continuous learning and improvement and am always excited to embrace new challenges to enhance my expert</p>
+                <button class="download-button" onclick="showSection('education')">Next Page →</button>
+            </section>
+
+            <section id="education">
+                <img src="education - Copy.webp" alt=" education Section Image">
+                <h2>Education</h2>
+                <p>MIGROS KIDS  MATRIC. HR .SEC .SCHOOL</p>
+                <p><b>KPR College of Arts, Science and Research</b> - BSc Computer Science (2023-2026)</p>
+                <button class="download-button" onclick="showSection('skills')">Next Page →</button>
+            </section>
+
+            <section id="skills">
+                <img src="skill2.jpeg" alt="skills Section Image">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Cybersecurity</li>
+                    <li>Python, Java, C++</li>
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                </ul>
+                <button class="download-button" onclick="showSection('course')">Next Page →</button>
+            </section>
+
+            <section id="course">
+                <img src="course.jpeg" alt="course Section Image">
+                <h2>Courses</h2>
+                <ul>
+                    <li>Data Science</li>
+                    <li>Data Structures</li>
+                    <li>Graphic Design</li>
+                    <button class="download-button" onclick="showSection('hobbies')">Next Page →</button>
+                </ul>
+            </section>
+
+            <section id="hobbies">
+                <img src="hobbies.jpg" alt="hobbies Section Image">
+                <h2>Hobbies & Interests</h2>
+                <ul>
+                    <li>Photography</li>
+                    <li>Graphic Design</li>
+                    <li>Music</li>
+                </ul>
+                <button class="download-button" onclick="showSection('certifications')">Next Page →</button>
+            </section>
+
+            <section id="certifications">
+                <img src="certifiv.jpeg" alt="Certifications Section Image">
+                <h2>Certifications</h2>
+                <a href="visruti certification.pdf" target="_blank" class="download-button">View Certifications</a>
+                <button class="download-button" onclick="showSection('resume')">Next Page →</button>
+            </section>
+
+            <section id="resume">
+                <img src="resume.png" alt="resume Section Image">
+                <h2>Resume</h2>
+                <a href="visruti .pdf" target="_blank" class="download-button">Download CV</a>
+                <button class="download-button" onclick="showSection('contact')">Next Page →</button>
+            </section>
+
+            <section id="contact">
+                <img src="constant.jpeg" alt="Contact Section Image">
+                <h2>Contact</h2>
+                <p><strong>Email:</strong> visrutia4@gmail.com</p>
+                <p><strong>LinkedIn:</strong> <a href=" https://www.linkedin.com/in/visruti-arumugam-828017286?
+                    utm_source=share&utm_campaign=share_via&utm_content=profile&u
+                    tm_medium=android_app">linkedin.com/in/yourprofile</a></p>
+                <p><strong>Location:</strong> Avinashi, Tamil Nadu, India</p>
+                <button class="download-button" onclick="showSection('container')">Next Page →</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Visruti A</p>
+        </footer>
+    </div>
+
+    <script>
+        function showPortfolio() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('portfolio').style.display = 'block';
+            showSection('about');
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll("section").forEach(section => section.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => showSection('about'));
+    </script>
+
+</body>
+</html>
